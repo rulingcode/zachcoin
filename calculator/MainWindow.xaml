@@ -1,0 +1,24 @@
+﻿<Window x:Class="calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <StackPanel Margin="10" FlowDirection="RightToLeft">
+        <Label Content="شماره اولین بسته"/>
+        <TextBox Padding="4" x:Name="txt_strat"/>
+        <Label Content="شماره آخرین بسته"/>
+        <TextBox Padding="4" x:Name="txt_end"/>
+        <Button x:Name="btn" Padding="4" Content="اجرا"/>
+        <Label Content="تعداد سکه ها"/>
+        <Label Content="?" x:Name="lbl_number"/>
+        <Label Content="حداکثر قیمت : "/>
+        <Label x:Name="max_pric" Content="?"/>
+        <Label Content="موجودی صندوق"/>
+        <Label x:Name="pey_all" Content="?"/>
+        <Label Content="پشتیبانی"/>
+        <Label x:Name="suport25" Content="?"/>
+    </StackPanel>
+</Window>
