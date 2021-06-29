@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:support"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="400">
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <TextBox x:Name="txt" Padding="5"/>
+        <Label Name="lbl" Content="0"/>
+        <Button x:Name="btn" Click="btn_Click" Content="click"/>
+    </StackPanel>
 </Window>

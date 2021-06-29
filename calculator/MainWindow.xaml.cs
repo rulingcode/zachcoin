@@ -20,8 +20,8 @@ namespace calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        const double fix = 99999999;
-        double caaa = 30000000;
+        const double fix = 10000 * 10000;
+        double caaa = 100 * 1000000;
         public MainWindow()
         {
             InitializeComponent();
@@ -91,17 +91,18 @@ namespace calculator
                 error();
                 return;
             }
-            n_start += 9;
-            n_end += 9;
             n = get_tokens(n_start, n_end);
-            lbl_number.Content = string.Format("{0:n0}", n);
+            lbl_number.Content = n.ToString("n0");
             Clipboard.SetText(n.ToString());
             double price = get_price(n_end);
-            max_pric.Content = price.ToString("c10");
+            max_pric.Content = price.ToString("c6");
             pey_all.Content = (caaa * price).ToString("c0");
-            suport25.Content = (price / 4).ToString("c10");
+            suport25.Content = (price / 4).ToString("c6");
         }
-        private static double get_price(int n_end) => 500 / (fix / n_end);
+        private static double get_price(int n_end)
+        {
+            return 500 / (fix / n_end);
+        }
         double get_tokens(int start, int end)
         {
             double n = 0;
